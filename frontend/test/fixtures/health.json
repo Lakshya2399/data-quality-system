@@ -1,0 +1,7 @@
+{
+  "status": "ok",
+  "version": "0.5.0",
+  "gemini_configured": false,
+  "model": "gemini-2.5-flash",
+  "db_path": "/tmp/tmpp0e8s8q6/good.sqlite"
+}

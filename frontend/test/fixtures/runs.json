@@ -1,0 +1,13 @@
+[
+  {
+    "run_id": "8018385fc2cc",
+    "created_at": "2026-11-08T06:18:54.808Z",
+    "sample_file": "sample_orders.csv",
+    "lookup_file": "valid_regions.csv",
+    "status": "completed",
+    "error": null,
+    "warnings": [],
+    "rule_count": 8,
+    "execution_count": 1
+  }
+]

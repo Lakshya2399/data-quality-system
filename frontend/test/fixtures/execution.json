@@ -1,0 +1,574 @@
+{
+  "exec_id": 1,
+  "run_id": "8018385fc2cc",
+  "target_file": "prod_orders.csv",
+  "total_rows": 400,
+  "status": "completed",
+  "error": null,
+  "started_at": "2026-11-08T06:18:55.517Z",
+  "finished_at": "2026-11-08T06:18:55.566Z",
+  "summary": {
+    "rules_executed": 6,
+    "rules_with_failures": 6,
+    "rules_errored": 0
+  },
+  "results": [
+    {
+      "rule_key": "R4",
+      "rule_name": "discount_not_above_amount",
+      "rule_type": "cross_column_compare",
+      "severity": "high",
+      "description": "discount_not_above_amount.",
+      "score": 5,
+      "justification": "Reason for R4.",
+      "status": "ok",
+      "error": null,
+      "total_rows": 400,
+      "pass_count": 378,
+      "fail_count": 22,
+      "skipped_count": 5,
+      "failed_row_ids": [
+        "ORD-20054",
+        "ORD-20083",
+        "ORD-20095",
+        "ORD-20113",
+        "ORD-20125",
+        "ORD-20139",
+        "ORD-20145",
+        "ORD-20149",
+        "ORD-20178",
+        "ORD-20210",
+        "ORD-20218",
+        "ORD-20226",
+        "ORD-20247",
+        "ORD-20250",
+        "ORD-20273",
+        "ORD-20276",
+        "ORD-20282",
+        "ORD-20295",
+        "ORD-20296",
+        "ORD-20311",
+        "ORD-20319",
+        "ORD-20360"
+      ],
+      "failed_row_indices": [
+        53,
+        82,
+        94,
+        112,
+        124,
+        138,
+        144,
+        148,
+        177,
+        209,
+        217,
+        225,
+        246,
+        249,
+        272,
+        275,
+        281,
+        294,
+        295,
+        310,
+        318,
+        359
+      ],
+      "failed_ids_truncated": false,
+      "sample_reasons": [
+        {
+          "row_index": 53,
+          "row_id": "ORD-20054",
+          "reason": "expected discount_amount <= order_amount, got 499.04 vs 380.72"
+        },
+        {
+          "row_index": 82,
+          "row_id": "ORD-20083",
+          "reason": "expected discount_amount <= order_amount, got 832.14 vs 532.34"
+        },
+        {
+          "row_index": 94,
+          "row_id": "ORD-20095",
+          "reason": "expected discount_amount <= order_amount, got 648.98 vs 415.02"
+        },
+        {
+          "row_index": 112,
+          "row_id": "ORD-20113",
+          "reason": "expected discount_amount <= order_amount, got 0.0 vs -265.67"
+        },
+        {
+          "row_index": 124,
+          "row_id": "ORD-20125",
+          "reason": "expected discount_amount <= order_amount, got 0.0 vs -538.41"
+        },
+        {
+          "row_index": 138,
+          "row_id": "ORD-20139",
+          "reason": "expected discount_amount <= order_amount, got 0.0 vs -613.58"
+        },
+        {
+          "row_index": 144,
+          "row_id": "ORD-20145",
+          "reason": "expected discount_amount <= order_amount, got 1080.77 vs 838.47"
+        },
+        {
+          "row_index": 148,
+          "row_id": "ORD-20149",
+          "reason": "expected discount_amount <= order_amount, got 172.82 vs 113.4"
+        },
+        {
+          "row_index": 177,
+          "row_id": "ORD-20178",
+          "reason": "expected discount_amount <= order_amount, got 0.0 vs -300.55"
+        },
+        {
+          "row_index": 209,
+          "row_id": "ORD-20210",
+          "reason": "expected discount_amount <= order_amount, got 274.58 vs 229.58"
+        }
+      ]
+    },
+    {
+      "rule_key": "R6",
+      "rule_name": "created_at_iso",
+      "rule_type": "date_format",
+      "severity": "medium",
+      "description": "created_at_iso.",
+      "score": 4,
+      "justification": "Reason for R6.",
+      "status": "ok",
+      "error": null,
+      "total_rows": 400,
+      "pass_count": 380,
+      "fail_count": 20,
+      "skipped_count": 0,
+      "failed_row_ids": [
+        "ORD-20038",
+        "ORD-20060",
+        "ORD-20072",
+        "ORD-20094",
+        "ORD-20111",
+        "ORD-20115",
+        "ORD-20123",
+        "ORD-20126",
+        "ORD-20148",
+        "ORD-20151",
+        "ORD-20193",
+        "ORD-20242",
+        "ORD-20256",
+        "ORD-20258",
+        "ORD-20284",
+        "ORD-20294",
+        "ORD-20306",
+        "ORD-20355",
+        "ORD-20368",
+        "ORD-20399"
+      ],
+      "failed_row_indices": [
+        37,
+        59,
+        71,
+        93,
+        110,
+        114,
+        122,
+        125,
+        147,
+        150,
+        192,
+        241,
+        255,
+        257,
+        283,
+        293,
+        305,
+        354,
+        367,
+        398
+      ],
+      "failed_ids_truncated": false,
+      "sample_reasons": [
+        {
+          "row_index": 37,
+          "row_id": "ORD-20038",
+          "reason": "created_at='27/01/2026' matches none of the accepted formats ['%Y-%m-%d %H:%M:%S', '%Y-%m-%dT%H:%M:%S', '%Y-%m-%d']"
+        },
+        {
+          "row_index": 59,
+          "row_id": "ORD-20060",
+          "reason": "created_at='Feb 11 2026' matches none of the accepted formats ['%Y-%m-%d %H:%M:%S', '%Y-%m-%dT%H:%M:%S', '%Y-%m-%d']"
+        },
+        {
+          "row_index": 71,
+          "row_id": "ORD-20072",
+          "reason": "created_at='02-20-2026' matches none of the accepted formats ['%Y-%m-%d %H:%M:%S', '%Y-%m-%dT%H:%M:%S', '%Y-%m-%d']"
+        },
+        {
+          "row_index": 93,
+          "row_id": "ORD-20094",
+          "reason": "created_at='11/03/2026' matches none of the accepted formats ['%Y-%m-%d %H:%M:%S', '%Y-%m-%dT%H:%M:%S', '%Y-%m-%d']"
+        },
+        {
+          "row_index": 110,
+          "row_id": "ORD-20111",
+          "reason": "created_at='Mar 23 2026' matches none of the accepted formats ['%Y-%m-%d %H:%M:%S', '%Y-%m-%dT%H:%M:%S', '%Y-%m-%d']"
+        },
+        {
+          "row_index": 114,
+          "row_id": "ORD-20115",
+          "reason": "created_at='03-25-2026' matches none of the accepted formats ['%Y-%m-%d %H:%M:%S', '%Y-%m-%dT%H:%M:%S', '%Y-%m-%d']"
+        },
+        {
+          "row_index": 122,
+          "row_id": "ORD-20123",
+          "reason": "created_at='31/03/2026' matches none of the accepted formats ['%Y-%m-%d %H:%M:%S', '%Y-%m-%dT%H:%M:%S', '%Y-%m-%d']"
+        },
+        {
+          "row_index": 125,
+          "row_id": "ORD-20126",
+          "reason": "created_at='Apr 02 2026' matches none of the accepted formats ['%Y-%m-%d %H:%M:%S', '%Y-%m-%dT%H:%M:%S', '%Y-%m-%d']"
+        },
+        {
+          "row_index": 147,
+          "row_id": "ORD-20148",
+          "reason": "created_at='04-14-2026' matches none of the accepted formats ['%Y-%m-%d %H:%M:%S', '%Y-%m-%dT%H:%M:%S', '%Y-%m-%d']"
+        },
+        {
+          "row_index": 150,
+          "row_id": "ORD-20151",
+          "reason": "created_at='19/04/2026' matches none of the accepted formats ['%Y-%m-%d %H:%M:%S', '%Y-%m-%dT%H:%M:%S', '%Y-%m-%d']"
+        }
+      ]
+    },
+    {
+      "rule_key": "R5",
+      "rule_name": "region_code_valid",
+      "rule_type": "lookup_in",
+      "severity": "high",
+      "description": "region_code_valid.",
+      "score": 5,
+      "justification": "Reason for R5.",
+      "status": "ok",
+      "error": null,
+      "total_rows": 400,
+      "pass_count": 385,
+      "fail_count": 15,
+      "skipped_count": 0,
+      "failed_row_ids": [
+        "ORD-20004",
+        "ORD-20037",
+        "ORD-20061",
+        "ORD-20066",
+        "ORD-20093",
+        "ORD-20101",
+        "ORD-20190",
+        "ORD-20194",
+        "ORD-20224",
+        "ORD-20277",
+        "ORD-20280",
+        "ORD-20290",
+        "ORD-20309",
+        "ORD-20314",
+        "ORD-20380"
+      ],
+      "failed_row_indices": [
+        3,
+        36,
+        60,
+        65,
+        92,
+        100,
+        189,
+        193,
+        223,
+        276,
+        279,
+        289,
+        308,
+        313,
+        379
+      ],
+      "failed_ids_truncated": false,
+      "sample_reasons": [
+        {
+          "row_index": 3,
+          "row_id": "ORD-20004",
+          "reason": "region_code='UK-LON' not found in valid_regions.region_code"
+        },
+        {
+          "row_index": 36,
+          "row_id": "ORD-20037",
+          "reason": "region_code='BR-SP' not found in valid_regions.region_code"
+        },
+        {
+          "row_index": 60,
+          "row_id": "ORD-20061",
+          "reason": "region_code='UK-LON' not found in valid_regions.region_code"
+        },
+        {
+          "row_index": 65,
+          "row_id": "ORD-20066",
+          "reason": "region_code='in-up' not found in valid_regions.region_code"
+        },
+        {
+          "row_index": 92,
+          "row_id": "ORD-20093",
+          "reason": "region_code='US-CA ' not found in valid_regions.region_code"
+        },
+        {
+          "row_index": 100,
+          "row_id": "ORD-20101",
+          "reason": "region_code='UK-LON' not found in valid_regions.region_code"
+        },
+        {
+          "row_index": 189,
+          "row_id": "ORD-20190",
+          "reason": "region_code='FR-IDF' not found in valid_regions.region_code"
+        },
+        {
+          "row_index": 193,
+          "row_id": "ORD-20194",
+          "reason": "region_code='ZZ-99' not found in valid_regions.region_code"
+        },
+        {
+          "row_index": 223,
+          "row_id": "ORD-20224",
+          "reason": "region_code='in-up' not found in valid_regions.region_code"
+        },
+        {
+          "row_index": 276,
+          "row_id": "ORD-20277",
+          "reason": "region_code='US-TX' not found in valid_regions.region_code"
+        }
+      ]
+    },
+    {
+      "rule_key": "R3",
+      "rule_name": "order_amount_non_negative",
+      "rule_type": "range",
+      "severity": "high",
+      "description": "order_amount_non_negative.",
+      "score": 5,
+      "justification": "Reason for R3.",
+      "status": "ok",
+      "error": null,
+      "total_rows": 400,
+      "pass_count": 390,
+      "fail_count": 10,
+      "skipped_count": 5,
+      "failed_row_ids": [
+        "ORD-20113",
+        "ORD-20125",
+        "ORD-20139",
+        "ORD-20178",
+        "ORD-20226",
+        "ORD-20247",
+        "ORD-20250",
+        "ORD-20273",
+        "ORD-20295",
+        "ORD-20311"
+      ],
+      "failed_row_indices": [
+        112,
+        124,
+        138,
+        177,
+        225,
+        246,
+        249,
+        272,
+        294,
+        310
+      ],
+      "failed_ids_truncated": false,
+      "sample_reasons": [
+        {
+          "row_index": 112,
+          "row_id": "ORD-20113",
+          "reason": "order_amount=-265.67 is below min 0"
+        },
+        {
+          "row_index": 124,
+          "row_id": "ORD-20125",
+          "reason": "order_amount=-538.41 is below min 0"
+        },
+        {
+          "row_index": 138,
+          "row_id": "ORD-20139",
+          "reason": "order_amount=-613.58 is below min 0"
+        },
+        {
+          "row_index": 177,
+          "row_id": "ORD-20178",
+          "reason": "order_amount=-300.55 is below min 0"
+        },
+        {
+          "row_index": 225,
+          "row_id": "ORD-20226",
+          "reason": "order_amount=-521.84 is below min 0"
+        },
+        {
+          "row_index": 246,
+          "row_id": "ORD-20247",
+          "reason": "order_amount=-784.48 is below min 0"
+        },
+        {
+          "row_index": 249,
+          "row_id": "ORD-20250",
+          "reason": "order_amount=-102.27 is below min 0"
+        },
+        {
+          "row_index": 272,
+          "row_id": "ORD-20273",
+          "reason": "order_amount=-396.42 is below min 0"
+        },
+        {
+          "row_index": 294,
+          "row_id": "ORD-20295",
+          "reason": "order_amount=-307.93 is below min 0"
+        },
+        {
+          "row_index": 310,
+          "row_id": "ORD-20311",
+          "reason": "order_amount=-777.03 is below min 0"
+        }
+      ]
+    },
+    {
+      "rule_key": "R1",
+      "rule_name": "order_id_unique",
+      "rule_type": "unique",
+      "severity": "high",
+      "description": "order_id_unique.",
+      "score": 5,
+      "justification": "Reason for R1.",
+      "status": "ok",
+      "error": null,
+      "total_rows": 400,
+      "pass_count": 392,
+      "fail_count": 8,
+      "skipped_count": 0,
+      "failed_row_ids": [
+        "ORD-20012",
+        "ORD-20021",
+        "ORD-20221",
+        "ORD-20253",
+        "ORD-20262",
+        "ORD-20338",
+        "ORD-20340",
+        "ORD-20392"
+      ],
+      "failed_row_indices": [
+        11,
+        20,
+        220,
+        252,
+        261,
+        337,
+        339,
+        391
+      ],
+      "failed_ids_truncated": false,
+      "sample_reasons": [
+        {
+          "row_index": 11,
+          "row_id": "ORD-20012",
+          "reason": "duplicate value 'ORD-20012' in order_id (2 occurrences)"
+        },
+        {
+          "row_index": 20,
+          "row_id": "ORD-20021",
+          "reason": "duplicate value 'ORD-20021' in order_id (2 occurrences)"
+        },
+        {
+          "row_index": 220,
+          "row_id": "ORD-20221",
+          "reason": "duplicate value 'ORD-20221' in order_id (2 occurrences)"
+        },
+        {
+          "row_index": 252,
+          "row_id": "ORD-20253",
+          "reason": "duplicate value 'ORD-20253' in order_id (2 occurrences)"
+        },
+        {
+          "row_index": 261,
+          "row_id": "ORD-20262",
+          "reason": "duplicate value 'ORD-20262' in order_id (2 occurrences)"
+        },
+        {
+          "row_index": 337,
+          "row_id": "ORD-20338",
+          "reason": "duplicate value 'ORD-20338' in order_id (2 occurrences)"
+        },
+        {
+          "row_index": 339,
+          "row_id": "ORD-20340",
+          "reason": "duplicate value 'ORD-20340' in order_id (2 occurrences)"
+        },
+        {
+          "row_index": 391,
+          "row_id": "ORD-20392",
+          "reason": "duplicate value 'ORD-20392' in order_id (2 occurrences)"
+        }
+      ]
+    },
+    {
+      "rule_key": "R2",
+      "rule_name": "order_amount_not_null",
+      "rule_type": "not_null",
+      "severity": "high",
+      "description": "order_amount_not_null.",
+      "score": 5,
+      "justification": "Reason for R2.",
+      "status": "ok",
+      "error": null,
+      "total_rows": 400,
+      "pass_count": 395,
+      "fail_count": 5,
+      "skipped_count": 0,
+      "failed_row_ids": [
+        "ORD-20005",
+        "ORD-20048",
+        "ORD-20098",
+        "ORD-20255",
+        "ORD-20257"
+      ],
+      "failed_row_indices": [
+        4,
+        47,
+        97,
+        254,
+        256
+      ],
+      "failed_ids_truncated": false,
+      "sample_reasons": [
+        {
+          "row_index": 4,
+          "row_id": "ORD-20005",
+          "reason": "order_amount is null or blank"
+        },
+        {
+          "row_index": 47,
+          "row_id": "ORD-20048",
+          "reason": "order_amount is null or blank"
+        },
+        {
+          "row_index": 97,
+          "row_id": "ORD-20098",
+          "reason": "order_amount is null or blank"
+        },
+        {
+          "row_index": 254,
+          "row_id": "ORD-20255",
+          "reason": "order_amount is null or blank"
+        },
+        {
+          "row_index": 256,
+          "row_id": "ORD-20257",
+          "reason": "order_amount is null or blank"
+        }
+      ]
+    }
+  ]
+}

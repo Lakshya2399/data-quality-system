@@ -1,0 +1,12 @@
+[
+  {
+    "exec_id": 1,
+    "run_id": "8018385fc2cc",
+    "target_file": "prod_orders.csv",
+    "total_rows": 400,
+    "status": "completed",
+    "error": null,
+    "started_at": "2026-11-08T06:18:55.517Z",
+    "finished_at": "2026-11-08T06:18:55.566Z"
+  }
+]

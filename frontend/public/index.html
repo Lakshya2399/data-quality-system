@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Data Quality System</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>Data Quality System</h1>
+    <div id="backend-status" class="pill" role="status">Checking backend&hellip;</div>
+  </header>
+
+  <div id="banner" class="banner" role="alert" hidden></div>
+
+  <main>
+    <!-- 1. Run controls -->
+    <section id="panel-controls" aria-labelledby="h-controls">
+      <h2 id="h-controls"><span class="step">1</span> Run controls</h2>
+
+      <div class="grid2">
+        <form id="pipeline-form" class="card">
+          <h3>Sample pipeline</h3>
+          <p class="hint">Profiles the clean sample, infers the data model, then generates and rates rules.</p>
+          <fieldset>
+            <legend class="sr-only">Input files</legend>
+            <label class="radio"><input type="radio" name="pipeline-mode" id="pipeline-mode-default" value="default" checked> Use the default files (<code>sample_orders.csv</code>, <code>valid_regions.csv</code>)</label>
+            <label class="radio"><input type="radio" name="pipeline-mode" id="pipeline-mode-upload" value="upload"> Upload my own</label>
+            <div id="pipeline-uploads" class="uploads" hidden>
+              <label>Clean sample CSV <input type="file" id="sample-file" accept=".csv,text/csv"></label>
+              <label>Lookup CSV <input type="file" id="lookup-file" accept=".csv,text/csv"></label>
+            </div>
+          </fieldset>
+          <button type="submit" id="run-pipeline" class="primary">Run sample pipeline</button>
+        </form>
+
+        <form id="execute-form" class="card">
+          <h3>Execute on production file</h3>
+          <p class="hint">Runs the highest-rated rules of the selected run against a larger file.</p>
+          <fieldset>
+            <legend class="sr-only">Production file</legend>
+            <label class="radio"><input type="radio" name="exec-mode" id="exec-mode-default" value="default" checked> Use the default file (<code>prod_orders.csv</code>)</label>
+            <label class="radio"><input type="radio" name="exec-mode" id="exec-mode-upload" value="upload"> Upload my own</label>
+            <div id="exec-uploads" class="uploads" hidden>
+              <label>Production CSV <input type="file" id="target-file" accept=".csv,text/csv"></label>
+            </div>
+          </fieldset>
+          <label class="inline">Run rules rated at least
+            <select id="min-score">
+              <option value="5">5 &ndash; critical only</option>
+              <option value="4" selected>4 &ndash; important and up</option>
+              <option value="3">3 &ndash; useful and up</option>
+              <option value="2">2</option>
+              <option value="1">1 &ndash; everything</option>
+            </select>
+          </label>
+          <p id="execute-hint" class="hint" aria-live="polite"></p>
+          <button type="submit" id="run-execute" class="primary" disabled>Execute rules</button>
+        </form>
+      </div>
+
+      <div class="runbar">
+        <label>Run
+          <select id="run-select" aria-label="Select a run"></select>
+        </label>
+        <button type="button" id="refresh" class="secondary">Refresh</button>
+        <div id="run-status" class="status" role="status" aria-live="polite">No run selected.</div>
+      </div>
+    </section>
+
+    <!-- 2. Data model -->
+    <section id="panel-model" aria-labelledby="h-model">
+      <h2 id="h-model"><span class="step">2</span> Data model</h2>
+      <div id="model-body"><p class="empty">Run the sample pipeline to see the inferred data model.</p></div>
+    </section>
+
+    <!-- 3. Rules -->
+    <section id="panel-rules" aria-labelledby="h-rules">
+      <h2 id="h-rules"><span class="step">3</span> Rules and ratings</h2>
+      <div id="rules-body"><p class="empty">No rules yet.</p></div>
+    </section>
+
+    <!-- 4. Validation report -->
+    <section id="panel-report" aria-labelledby="h-report">
+      <h2 id="h-report"><span class="step">4</span> Validation report</h2>
+      <div class="runbar">
+        <label>Execution
+          <select id="exec-select" aria-label="Select an execution"></select>
+        </label>
+      </div>
+      <div id="report-body"><p class="empty">Execute the rules on a production file to see the report.</p></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

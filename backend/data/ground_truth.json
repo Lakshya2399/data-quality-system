@@ -1,0 +1,526 @@
+{
+  "seed": 42,
+  "row_count": 400,
+  "conventions": {
+    "row_index": "0-based position of the data row (header excluded)",
+    "iso_format": "%Y-%m-%d %H:%M:%S",
+    "null_handling": "Null values are flagged only by not_null rules; range, regex, compare, lookup and date rules skip nulls.",
+    "unique_rule": "Flags repeat occurrences (keep='first'); duplicate_order_id.rows_involved gives the count if both rows of each pair are flagged (keep=False).",
+    "overlap_note": "negative_order_amount rows also fail discount_le_order_amount."
+  },
+  "injected": {
+    "negative_order_amount": {
+      "count": 10,
+      "row_indices": [
+        112,
+        124,
+        138,
+        177,
+        225,
+        246,
+        249,
+        272,
+        294,
+        310
+      ],
+      "order_ids": [
+        "ORD-20113",
+        "ORD-20125",
+        "ORD-20139",
+        "ORD-20178",
+        "ORD-20226",
+        "ORD-20247",
+        "ORD-20250",
+        "ORD-20273",
+        "ORD-20295",
+        "ORD-20311"
+      ]
+    },
+    "discount_gt_order_amount": {
+      "count": 12,
+      "row_indices": [
+        53,
+        82,
+        94,
+        144,
+        148,
+        209,
+        217,
+        275,
+        281,
+        295,
+        318,
+        359
+      ],
+      "order_ids": [
+        "ORD-20054",
+        "ORD-20083",
+        "ORD-20095",
+        "ORD-20145",
+        "ORD-20149",
+        "ORD-20210",
+        "ORD-20218",
+        "ORD-20276",
+        "ORD-20282",
+        "ORD-20296",
+        "ORD-20319",
+        "ORD-20360"
+      ]
+    },
+    "invalid_region_code": {
+      "count": 15,
+      "row_indices": [
+        3,
+        36,
+        60,
+        65,
+        92,
+        100,
+        189,
+        193,
+        223,
+        276,
+        279,
+        289,
+        308,
+        313,
+        379
+      ],
+      "order_ids": [
+        "ORD-20004",
+        "ORD-20037",
+        "ORD-20061",
+        "ORD-20066",
+        "ORD-20093",
+        "ORD-20101",
+        "ORD-20190",
+        "ORD-20194",
+        "ORD-20224",
+        "ORD-20277",
+        "ORD-20280",
+        "ORD-20290",
+        "ORD-20309",
+        "ORD-20314",
+        "ORD-20380"
+      ]
+    },
+    "duplicate_order_id": {
+      "count": 8,
+      "row_indices": [
+        8,
+        12,
+        74,
+        157,
+        161,
+        219,
+        224,
+        312
+      ],
+      "order_ids": [
+        "ORD-20012",
+        "ORD-20021",
+        "ORD-20221",
+        "ORD-20253",
+        "ORD-20262",
+        "ORD-20338",
+        "ORD-20340",
+        "ORD-20392"
+      ],
+      "pairs_row_indices": [
+        [
+          8,
+          11
+        ],
+        [
+          12,
+          20
+        ],
+        [
+          74,
+          220
+        ],
+        [
+          157,
+          252
+        ],
+        [
+          161,
+          261
+        ],
+        [
+          219,
+          337
+        ],
+        [
+          224,
+          339
+        ],
+        [
+          312,
+          391
+        ]
+      ],
+      "rows_involved": 16
+    },
+    "non_iso_created_at": {
+      "count": 20,
+      "row_indices": [
+        37,
+        59,
+        71,
+        93,
+        110,
+        114,
+        122,
+        125,
+        147,
+        150,
+        192,
+        241,
+        255,
+        257,
+        283,
+        293,
+        305,
+        354,
+        367,
+        398
+      ],
+      "order_ids": [
+        "ORD-20038",
+        "ORD-20060",
+        "ORD-20072",
+        "ORD-20094",
+        "ORD-20111",
+        "ORD-20115",
+        "ORD-20123",
+        "ORD-20126",
+        "ORD-20148",
+        "ORD-20151",
+        "ORD-20193",
+        "ORD-20242",
+        "ORD-20256",
+        "ORD-20258",
+        "ORD-20284",
+        "ORD-20294",
+        "ORD-20306",
+        "ORD-20355",
+        "ORD-20368",
+        "ORD-20399"
+      ]
+    },
+    "null_customer_email": {
+      "count": 10,
+      "row_indices": [
+        31,
+        39,
+        41,
+        79,
+        204,
+        236,
+        239,
+        302,
+        377,
+        388
+      ],
+      "order_ids": [
+        "ORD-20032",
+        "ORD-20040",
+        "ORD-20042",
+        "ORD-20080",
+        "ORD-20205",
+        "ORD-20237",
+        "ORD-20240",
+        "ORD-20303",
+        "ORD-20378",
+        "ORD-20389"
+      ]
+    },
+    "null_order_amount": {
+      "count": 5,
+      "row_indices": [
+        4,
+        47,
+        97,
+        254,
+        256
+      ],
+      "order_ids": [
+        "ORD-20005",
+        "ORD-20048",
+        "ORD-20098",
+        "ORD-20255",
+        "ORD-20257"
+      ]
+    },
+    "malformed_email": {
+      "count": 6,
+      "row_indices": [
+        106,
+        139,
+        158,
+        183,
+        353,
+        355
+      ],
+      "order_ids": [
+        "ORD-20107",
+        "ORD-20140",
+        "ORD-20159",
+        "ORD-20184",
+        "ORD-20354",
+        "ORD-20356"
+      ]
+    }
+  },
+  "expected_rule_failures": {
+    "not_null_customer_email": {
+      "count": 10,
+      "row_indices": [
+        31,
+        39,
+        41,
+        79,
+        204,
+        236,
+        239,
+        302,
+        377,
+        388
+      ],
+      "order_ids": [
+        "ORD-20032",
+        "ORD-20040",
+        "ORD-20042",
+        "ORD-20080",
+        "ORD-20205",
+        "ORD-20237",
+        "ORD-20240",
+        "ORD-20303",
+        "ORD-20378",
+        "ORD-20389"
+      ]
+    },
+    "not_null_order_amount": {
+      "count": 5,
+      "row_indices": [
+        4,
+        47,
+        97,
+        254,
+        256
+      ],
+      "order_ids": [
+        "ORD-20005",
+        "ORD-20048",
+        "ORD-20098",
+        "ORD-20255",
+        "ORD-20257"
+      ]
+    },
+    "order_amount_min_0": {
+      "count": 10,
+      "row_indices": [
+        112,
+        124,
+        138,
+        177,
+        225,
+        246,
+        249,
+        272,
+        294,
+        310
+      ],
+      "order_ids": [
+        "ORD-20113",
+        "ORD-20125",
+        "ORD-20139",
+        "ORD-20178",
+        "ORD-20226",
+        "ORD-20247",
+        "ORD-20250",
+        "ORD-20273",
+        "ORD-20295",
+        "ORD-20311"
+      ]
+    },
+    "discount_le_order_amount": {
+      "count": 22,
+      "row_indices": [
+        53,
+        82,
+        94,
+        112,
+        124,
+        138,
+        144,
+        148,
+        177,
+        209,
+        217,
+        225,
+        246,
+        249,
+        272,
+        275,
+        281,
+        294,
+        295,
+        310,
+        318,
+        359
+      ],
+      "order_ids": [
+        "ORD-20054",
+        "ORD-20083",
+        "ORD-20095",
+        "ORD-20113",
+        "ORD-20125",
+        "ORD-20139",
+        "ORD-20145",
+        "ORD-20149",
+        "ORD-20178",
+        "ORD-20210",
+        "ORD-20218",
+        "ORD-20226",
+        "ORD-20247",
+        "ORD-20250",
+        "ORD-20273",
+        "ORD-20276",
+        "ORD-20282",
+        "ORD-20295",
+        "ORD-20296",
+        "ORD-20311",
+        "ORD-20319",
+        "ORD-20360"
+      ]
+    },
+    "region_code_in_valid_regions": {
+      "count": 15,
+      "row_indices": [
+        3,
+        36,
+        60,
+        65,
+        92,
+        100,
+        189,
+        193,
+        223,
+        276,
+        279,
+        289,
+        308,
+        313,
+        379
+      ],
+      "order_ids": [
+        "ORD-20004",
+        "ORD-20037",
+        "ORD-20061",
+        "ORD-20066",
+        "ORD-20093",
+        "ORD-20101",
+        "ORD-20190",
+        "ORD-20194",
+        "ORD-20224",
+        "ORD-20277",
+        "ORD-20280",
+        "ORD-20290",
+        "ORD-20309",
+        "ORD-20314",
+        "ORD-20380"
+      ]
+    },
+    "unique_order_id_keep_first": {
+      "count": 8,
+      "row_indices": [
+        11,
+        20,
+        220,
+        252,
+        261,
+        337,
+        339,
+        391
+      ],
+      "order_ids": [
+        "ORD-20012",
+        "ORD-20021",
+        "ORD-20221",
+        "ORD-20253",
+        "ORD-20262",
+        "ORD-20338",
+        "ORD-20340",
+        "ORD-20392"
+      ]
+    },
+    "created_at_iso_format": {
+      "count": 20,
+      "row_indices": [
+        37,
+        59,
+        71,
+        93,
+        110,
+        114,
+        122,
+        125,
+        147,
+        150,
+        192,
+        241,
+        255,
+        257,
+        283,
+        293,
+        305,
+        354,
+        367,
+        398
+      ],
+      "order_ids": [
+        "ORD-20038",
+        "ORD-20060",
+        "ORD-20072",
+        "ORD-20094",
+        "ORD-20111",
+        "ORD-20115",
+        "ORD-20123",
+        "ORD-20126",
+        "ORD-20148",
+        "ORD-20151",
+        "ORD-20193",
+        "ORD-20242",
+        "ORD-20256",
+        "ORD-20258",
+        "ORD-20284",
+        "ORD-20294",
+        "ORD-20306",
+        "ORD-20355",
+        "ORD-20368",
+        "ORD-20399"
+      ]
+    },
+    "customer_email_format": {
+      "count": 6,
+      "row_indices": [
+        106,
+        139,
+        158,
+        183,
+        353,
+        355
+      ],
+      "order_ids": [
+        "ORD-20107",
+        "ORD-20140",
+        "ORD-20159",
+        "ORD-20184",
+        "ORD-20354",
+        "ORD-20356"
+      ]
+    }
+  }
+}

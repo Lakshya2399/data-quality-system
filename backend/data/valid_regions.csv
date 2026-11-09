@@ -1,0 +1,9 @@
+region_code,country,tax_cap
+IN-UP,India,0.18
+IN-MH,India,0.18
+IN-KA,India,0.18
+US-CA,United States,0.0975
+US-NY,United States,0.08875
+GB-ENG,United Kingdom,0.2
+DE-BE,Germany,0.19
+AU-NSW,Australia,0.1

@@ -1,0 +1,16 @@
+{
+  "exec_id": 1,
+  "run_id": "f547d8ec3d06",
+  "target_file": "prod_orders.csv",
+  "total_rows": null,
+  "status": "failed",
+  "error": "No rules rated 4 or higher for this run, so nothing was executed. Re-run the sample pipeline or lower the rating threshold.",
+  "started_at": "2026-11-08T06:18:55.653Z",
+  "finished_at": "2026-11-08T06:18:55.663Z",
+  "summary": {
+    "rules_executed": 0,
+    "rules_with_failures": 0,
+    "rules_errored": 0
+  },
+  "results": []
+}

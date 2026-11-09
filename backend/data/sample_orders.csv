@@ -1,0 +1,21 @@
+order_id,customer_email,region_code,order_amount,discount_amount,created_at
+ORD-10001,yuki.wang29@example.org,US-NY,220.9,39.13,2026-01-10 17:07:01
+ORD-10002,vikram.wang44@yahoo.com,IN-KA,731.35,0.0,2026-01-12 13:43:48
+ORD-10003,mia.singh46@yahoo.com,US-NY,205.55,9.99,2026-01-13 08:14:09
+ORD-10004,mia.patel71@yahoo.com,GB-ENG,729.31,124.09,2026-02-03 18:19:43
+ORD-10005,john.khan11@outlook.com,IN-MH,525.96,17.27,2026-02-06 09:18:10
+ORD-10006,vikram.rossi46@outlook.com,US-NY,351.41,89.1,2026-02-09 19:19:27
+ORD-10007,vikram.jones94@outlook.com,IN-KA,636.11,25.44,2026-02-13 05:40:50
+ORD-10008,yuki.brown88@yahoo.com,IN-UP,424.1,0.0,2026-02-24 04:35:15
+ORD-10009,olivia.tanaka35@gmail.com,US-CA,217.71,0.0,2026-03-26 21:51:13
+ORD-10010,sara.mishra51@example.org,IN-KA,823.13,181.92,2026-03-28 16:28:29
+ORD-10011,yuki.jones34@mail.co,DE-BE,249.42,0.0,2026-04-06 02:33:27
+ORD-10012,john.gupta66@example.org,IN-MH,809.57,0.0,2026-04-17 19:27:32
+ORD-10013,vikram.wang77@gmail.com,DE-BE,683.87,42.94,2026-06-13 20:35:47
+ORD-10014,yuki.sharma88@gmail.com,US-NY,352.73,59.31,2026-07-31 19:11:04
+ORD-10015,liam.wang21@example.org,IN-UP,695.21,0.0,2026-08-18 07:47:20
+ORD-10016,chen.smith65@gmail.com,US-NY,859.13,80.54,2026-09-06 07:53:23
+ORD-10017,noah.smith70@mail.co,IN-UP,759.88,57.52,2026-09-20 19:17:46
+ORD-10018,noah.khan31@gmail.com,US-CA,545.07,27.97,2026-10-14 00:24:33
+ORD-10019,omar.patel98@mail.co,IN-KA,792.04,34.84,2026-10-15 15:31:25
+ORD-10020,emma.yadav78@example.org,US-CA,128.63,22.37,2026-10-15 23:45:05

@@ -1,0 +1,20 @@
+{
+  "name": "dq-ui",
+  "version": "0.6.0",
+  "private": true,
+  "description": "Minimal UI for the multi-agent data quality system: serves a static page and proxies /api/* to FastAPI.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "jsdom": "^26.0.0"
+  }
+}

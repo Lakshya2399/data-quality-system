@@ -1,0 +1,220 @@
+{
+  "run_id": "8018385fc2cc",
+  "status": "completed",
+  "min_score": 4,
+  "executable_count": 6,
+  "score_distribution": {
+    "1": 0,
+    "2": 0,
+    "3": 2,
+    "4": 1,
+    "5": 5
+  },
+  "warnings": [],
+  "rules": [
+    {
+      "id": 1,
+      "rule_key": "R1",
+      "name": "order_id_unique",
+      "type": "unique",
+      "severity": "high",
+      "description": "order_id_unique.",
+      "definition": {
+        "rule_id": "R1",
+        "name": "order_id_unique",
+        "type": "unique",
+        "columns": [
+          "order_id"
+        ],
+        "params": {
+          "keep": "first"
+        },
+        "severity": "high",
+        "description": "order_id_unique."
+      },
+      "sample_fail_count": 0,
+      "sample_pass_rate": 1.0,
+      "score": 5,
+      "justification": "Reason for R1.",
+      "will_execute": true
+    },
+    {
+      "id": 2,
+      "rule_key": "R2",
+      "name": "order_amount_not_null",
+      "type": "not_null",
+      "severity": "high",
+      "description": "order_amount_not_null.",
+      "definition": {
+        "rule_id": "R2",
+        "name": "order_amount_not_null",
+        "type": "not_null",
+        "columns": [
+          "order_amount"
+        ],
+        "params": {},
+        "severity": "high",
+        "description": "order_amount_not_null."
+      },
+      "sample_fail_count": 0,
+      "sample_pass_rate": 1.0,
+      "score": 5,
+      "justification": "Reason for R2.",
+      "will_execute": true
+    },
+    {
+      "id": 3,
+      "rule_key": "R3",
+      "name": "order_amount_non_negative",
+      "type": "range",
+      "severity": "high",
+      "description": "order_amount_non_negative.",
+      "definition": {
+        "rule_id": "R3",
+        "name": "order_amount_non_negative",
+        "type": "range",
+        "columns": [
+          "order_amount"
+        ],
+        "params": {
+          "min": 0
+        },
+        "severity": "high",
+        "description": "order_amount_non_negative."
+      },
+      "sample_fail_count": 0,
+      "sample_pass_rate": 1.0,
+      "score": 5,
+      "justification": "Reason for R3.",
+      "will_execute": true
+    },
+    {
+      "id": 4,
+      "rule_key": "R4",
+      "name": "discount_not_above_amount",
+      "type": "cross_column_compare",
+      "severity": "high",
+      "description": "discount_not_above_amount.",
+      "definition": {
+        "rule_id": "R4",
+        "name": "discount_not_above_amount",
+        "type": "cross_column_compare",
+        "columns": [
+          "discount_amount",
+          "order_amount"
+        ],
+        "params": {
+          "operator": "<="
+        },
+        "severity": "high",
+        "description": "discount_not_above_amount."
+      },
+      "sample_fail_count": 0,
+      "sample_pass_rate": 1.0,
+      "score": 5,
+      "justification": "Reason for R4.",
+      "will_execute": true
+    },
+    {
+      "id": 5,
+      "rule_key": "R5",
+      "name": "region_code_valid",
+      "type": "lookup_in",
+      "severity": "high",
+      "description": "region_code_valid.",
+      "definition": {
+        "rule_id": "R5",
+        "name": "region_code_valid",
+        "type": "lookup_in",
+        "columns": [
+          "region_code"
+        ],
+        "params": {
+          "lookup_file": "valid_regions",
+          "lookup_column": "region_code"
+        },
+        "severity": "high",
+        "description": "region_code_valid."
+      },
+      "sample_fail_count": 0,
+      "sample_pass_rate": 1.0,
+      "score": 5,
+      "justification": "Reason for R5.",
+      "will_execute": true
+    },
+    {
+      "id": 6,
+      "rule_key": "R6",
+      "name": "created_at_iso",
+      "type": "date_format",
+      "severity": "medium",
+      "description": "created_at_iso.",
+      "definition": {
+        "rule_id": "R6",
+        "name": "created_at_iso",
+        "type": "date_format",
+        "columns": [
+          "created_at"
+        ],
+        "params": {},
+        "severity": "medium",
+        "description": "created_at_iso."
+      },
+      "sample_fail_count": 0,
+      "sample_pass_rate": 1.0,
+      "score": 4,
+      "justification": "Reason for R6.",
+      "will_execute": true
+    },
+    {
+      "id": 7,
+      "rule_key": "R7",
+      "name": "customer_email_format",
+      "type": "regex",
+      "severity": "medium",
+      "description": "customer_email_format.",
+      "definition": {
+        "rule_id": "R7",
+        "name": "customer_email_format",
+        "type": "regex",
+        "columns": [
+          "customer_email"
+        ],
+        "params": {
+          "pattern": "[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)+"
+        },
+        "severity": "medium",
+        "description": "customer_email_format."
+      },
+      "sample_fail_count": 0,
+      "sample_pass_rate": 1.0,
+      "score": 3,
+      "justification": "Reason for R7.",
+      "will_execute": false
+    },
+    {
+      "id": 8,
+      "rule_key": "R8",
+      "name": "customer_email_not_null",
+      "type": "not_null",
+      "severity": "medium",
+      "description": "customer_email_not_null.",
+      "definition": {
+        "rule_id": "R8",
+        "name": "customer_email_not_null",
+        "type": "not_null",
+        "columns": [
+          "customer_email"
+        ],
+        "params": {},
+        "severity": "medium",
+        "description": "customer_email_not_null."
+      },
+      "sample_fail_count": 0,
+      "sample_pass_rate": 1.0,
+      "score": 3,
+      "justification": "Reason for R8.",
+      "will_execute": false
+    }
+  ]
+}

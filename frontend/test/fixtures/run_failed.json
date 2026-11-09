@@ -1,0 +1,11 @@
+{
+  "run_id": "1dd28fd1c04b",
+  "created_at": "2026-11-08T06:18:55.680Z",
+  "sample_file": "sample_orders.csv",
+  "lookup_file": "valid_regions.csv",
+  "status": "failed",
+  "error": "LLMOutputError: model_agent: no valid output after retries. Problems: response is not valid JSON (starts with: 'not json')",
+  "warnings": [],
+  "rule_count": 0,
+  "execution_count": 0
+}
